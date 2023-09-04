@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+
+<div class= "mx-auto">
+    <div class="container d-flex justify-content-start">
+        <form asp-action="CreateUser" method="post">
+            <h1> Enter your Information</h1>
+            <div class="row pt-2">
+                <div class="col">
+                    <label asp-for="Name"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="Name" class="form-control">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="row pt-2 ">
+                <div class="col">
+                    <label asp-for="Email"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="Email" class="form-control">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>                
+            </div>
+            <div class="row pt-2 ">
+                <div class="col">
+                    <label asp-for="DoB"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="DoB" class="form-control">
+                    <span asp-validation-for="DoB" class="text-danger"></span>
+                </div>                
+            </div>
+            <div class="row pt-2">
+                <div class="col">
+                    <label asp-for="Password"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="Password" class="form-control">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div> 
+            </div>
+            <div class="row pt-2 ">
+                <div class="col">
+                    <label asp-for="FavOddNum"></label>
+                </div>
+                <div class="col">
+                    <input asp-for ="FavOddNum" class="form-control">
+                    <span asp-validation-for="FavOddNum" class="text-danger"></span>
+                </div> 
+            </div>
+            <div class="pt-2">
+                <input type="submit" value="Submit" class="btn btn-primary float-end"> Submit</input>
+            </div>
+        </form>
+    </div>
+</div>
